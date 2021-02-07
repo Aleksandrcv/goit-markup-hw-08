@@ -14,15 +14,24 @@
     <header>   
         <nav class="container navigation">
             <a href="./index.html"><p class="logotip"><span class="logo-blue">Web</span><span class="logo-black" >Studio</span></p></a>
-             <ul class="nav-list">
+            <button type="button" class="menu-button"    aria-expanded="false" aria-controls="menu-container" 
+            data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close" href="./images/sprite.svg#close"></use>
+                    <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+                </svg>
+            </button> 
+
+           <div class="menu-container" id="menu-container" data-menu> 
+              <ul class="nav-list">
                  <li class="list"><a href="./index.html" class="nav-link selected-page" >Студия</a></li>
                  <li class="list"><a href="./portfolio.html" class="nav-link"  >Портфолио</a></li>
                  <li class="list"><a href="#" class="nav-link">Контакты</a></li>
-             </ul>
-            <ul class="adress-list">
+              </ul>
+              <ul class="adress-list">
                   <li class="lists">
                     <svg class="icon-contact" width="16" height="12">
-                      <use href="./images/sprite.svg#email"></use>
+                      <use href="./images/sprite.svg#envelope"></use>
                     </svg>
                     <a class="link-adress" href="mailto:info@devstudio.com">info@devstudio.com</a>
                   </li>
@@ -32,7 +41,8 @@
                     </svg>
                     <a class="link-adress" href="tel:+380961111111">+38 096 111 11 11</a>
                   </li>
-             </ul>        
+              </ul> 
+            </div>       
          </nav> 
     </header>
     <main>
@@ -86,7 +96,7 @@
                           <label class="checkbox-label">                            
                               <input class="checkbox-input" type="checkbox" name="mail" value="agree" />                             
                                   <svg width="16" height="15">
-                                      <use href="./images/sprite.svg#checked"></use>
+                                      <use href="./images/sprite.svg#check"></use>
                                   </svg>
                                    <span>Соглашаюсь с рассылкой и принимаю 
                                       <a href="">Условия договора</a>
@@ -108,7 +118,7 @@
                 <li class="item">
                    <div class="thumb-features">
                     <svg width="70" height="70">
-                        <use href="./images/sprite.svg#antenna"></use>
+                        <use href="./images/sprite.svg#details"></use>
                     </svg>
                    </div>
                   <h3 class="features-title">Внимание к деталям</h3>
@@ -150,13 +160,43 @@
               <h2 class="work-title">Чем мы занимаемся</h2>
                <ul class="foto-work" >
                   <li class="work-list">
-                    <a href=""><img src="./images/handsinkeyboard1.jpg" alt="hands and keyboards" width="370"><h3>Десктопные приложения</h3></a>
+                    <a href="">
+                      <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                ./images/content/1-desktop@1x.webp 1x,
+                                ./images/content/1-desktop@2x.webp 2x">                         
+                        <img alt="Картинка 1" width="370" height="294" srcset="
+                                ./images/content/1-desktop@1x.jpg 1x,
+                                ./images/content/1-desktop@2x.jpg 2x"
+                            src="./images/content/1-desktop@1x.jpg">                        
+                       </picture>                     
+                    <h3>Десктопные приложения</h3></a>
                   </li>
                   <li class="work-list">
-                   <a href="" class="link-work"> <img src="./images/notebookandpfone2.jpg" alt="remote control and monitor" width="370"><h3>Мобильные приложения</h3></a>
+                   <a href="" >
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/2-desktop@1x.webp 1x,
+                              ./images/content/2-desktop@2x.webp 2x">                         
+                      <img alt="Картинка 1" width="370" height="294" srcset="
+                              ./images/content/2-desktop@1x.jpg 1x,
+                              ./images/content/2-desktop@2x.jpg 2x"
+                          src="./images/content/2-desktop@1x.jpg">                        
+                     </picture>
+                     <h3>Мобильные приложения</h3></a>
                   </li>
                   <li class="work-list">
-                   <a href=""> <img src="./images/tablet3.jpg" alt="tablet in hand" width="370"><h3>Дизайнерские решения</h3></a>
+                   <a href=""> 
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/3-desktop@1x.webp 1x,
+                              ./images/content/3-desktop@2x.webp 2x">                         
+                      <img alt="Картинка 1" width="370" height="294" srcset="
+                              ./images/content/3-desktop@1x.jpg 1x,
+                              ./images/content/3-desktop@2x.jpg 2x"
+                          src="./images/content/3-desktop@1x.jpg">                        
+                     </picture>
+                    <h3>Дизайнерские решения</h3></a>
                   </li>
                </ul>
         </section> 
@@ -168,7 +208,27 @@
             <h2 class="our-title">Наша команда</h2>
                <ul class="team-list">
                   <li class="list-item">
-                    <img src="./images/igordemjanenko1.jpg" alt="Игорь Демьяненко" width="270" >
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/photo1-desktop@1x.webp 1x,
+                              ./images/content/photo1-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/webp" srcset="
+                              ./images/content/photo1-tablet@1x.webp 1x,
+                              ./images/content/photo1-tablet@2x.webp 2x">
+                      <source media="(max-width: 767px)" type="image/webp" srcset="
+                              ./images/content/photo1-mobile@1x.webp 1x,
+                              ./images/content/photo1-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                              ./images/content/photo1-desktop@1x.jpg 1x,
+                              ./images/content/photo1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/jpg" srcset="
+                              ./images/content/photo1-tablet@1x.jpg 1x,
+                              ./images/content/photo1-tablet@2x.jpg 2x">
+                      <img alt="Игорь Демьяненко" width="270" height="260" srcset="
+                              ./images/content/photo1-mobile@1x.jpg 1x,
+                              ./images/content/photo1-mobile@2x.jpg 2x"
+                          src="./images/content/photo1-mobile@1x.jpg">
+                  </picture>
                    <div class="card-content-team">
                        <h3 class="title-card-team">Игорь Демьяненко</h3> 
                        <p class="info-card-team">Product Designer</p>
@@ -201,7 +261,27 @@
                     </div>
                   </li>
                   <li class="list-item">
-                    <img src="./images/olgarepena2.jpg" alt="ОльгаРепина" width="270">
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/photo2-desktop@1x.webp 1x,
+                              ./images/content/photo2-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/webp" srcset="
+                              ./images/content/photo2-tablet@1x.webp 1x,
+                              ./images/content/photo2-tablet@2x.webp 2x">
+                      <source media="(max-width: 767px)" type="image/webp" srcset="
+                              ./images/content/photo2-mobile@1x.webp 1x,
+                              ./images/content/photo2-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                              ./images/content/photo2-desktop@1x.jpg 1x,
+                              ./images/content/photo2-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/jpg" srcset="
+                              ./images/content/photo2-tablet@1x.jpg 1x,
+                              ./images/content/photo2-tablet@2x.jpg 2x">
+                      <img alt="ОльгаРепина" width="270" height="260" srcset="
+                              ./images/content/photo2-mobile@1x.jpg 1x,
+                              ./images/content/photo2-mobile@2x.jpg 2x"
+                          src="./images/content/photo2-mobile@1x.jpg">
+                  </picture>
                    <div class="card-content-team">
                     <h3 class="title-card-team">Ольга Репина</h3> 
                     <p class="info-card-team">Frontend Developer</p>
@@ -234,7 +314,28 @@
                   </div>
                   </li>
                   <li class="list-item">
-                    <img src="./images/nikolaitarasov3.jpg" alt="НиколайТарасов" width="270">
+
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/photo3-desktop@1x.webp 1x,
+                              ./images/content/photo3-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/webp" srcset="
+                              ./images/content/photo3-tablet@1x.webp 1x,
+                              ./images/content/photo3-tablet@2x.webp 2x">
+                      <source media="(max-width: 767px)" type="image/webp" srcset="
+                              ./images/content/photo3-mobile@1x.webp 1x,
+                              ./images/content/photo3-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                              ./images/content/photo3-desktop@1x.jpg 1x,
+                              ./images/content/photo3-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/jpg" srcset="
+                              ./images/content/photo3-tablet@1x.jpg 1x,
+                              ./images/content/photo3-tablet@2x.jpg 2x">
+                      <img alt="НиколайТарасов" width="270" height="260" srcset="
+                              ./images/content/photo3-mobile@1x.jpg 1x,
+                              ./images/content/photo3-mobile@2x.jpg 2x"
+                          src="./images/content/photo3-mobile@1x.jpg">
+                  </picture>
                     <div class="card-content-team">
                     <h3 class="title-card-team">Николай Тарасов</h3> 
                     <p class="info-card-team">Marketing</p>
@@ -267,7 +368,27 @@
                   </div >
                   </li>
                   <li class="list-item">
-                    <img src="./images/mihaelyarmakov4.jpg" alt="МихаилЕрмаков" width="270">
+                    <picture>
+                      <source media="(min-width: 1200px)" type="image/webp" srcset="
+                              ./images/content/photo4-desktop@1x.webp 1x,
+                              ./images/content/photo4-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/webp" srcset="
+                              ./images/content/photo4-tablet@1x.webp 1x,
+                              ./images/content/photo4-tablet@2x.webp 2x">
+                      <source media="(max-width: 767px)" type="image/webp" srcset="
+                              ./images/content/photo4-mobile@1x.webp 1x,
+                              ./images/content/photo4-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                              ./images/content/photo4-desktop@1x.jpg 1x,
+                              ./images/content/photo4-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/jpg" srcset="
+                              ./images/content/photo4-tablet@1x.jpg 1x,
+                              ./images/content/photo4-tablet@2x.jpg 2x">
+                      <img alt="МихаилЕрмаков" width="270" height="260" srcset="
+                              ./images/content/photo4-mobile@1x.jpg 1x,
+                              ./images/content/photo4-mobile@2x.jpg 2x"
+                          src="./images/content/photo4-mobile@1x.jpg">
+                  </picture>
                   <div class="card-content-team">
                      <h3 class="title-card-team">Михаил Ермаков</h3>
                      <p class="info-card-team">UI Designer</p>
