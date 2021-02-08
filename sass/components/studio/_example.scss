@@ -1,0 +1,42 @@
+.work-list {
+  display: block;
+  width: calc((100%-60px) / 3);
+}
+
+.work-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.foto-work {
+  display: flex;
+  margin-top: 50px;
+}
+.foto-work .work-list {
+  position: relative;
+}
+
+.foto-work h3 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+
+  width: 370px;
+  height: 70px;
+
+  color: /*var(--tittle-text-color);*/ #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}

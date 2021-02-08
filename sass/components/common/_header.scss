@@ -1,0 +1,126 @@
+/*header*/
+/* Логотип */
+
+.logotip {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: $primary-text-color;
+}
+
+.logo-blue {
+  color: $accent-color;
+}
+
+/*логотип-фуутер*/
+.logo-footer {
+  color: $primary-text-color;
+}
+
+.logo-white {
+  color: $primary-bg-color;
+}
+
+/*шапка*/
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav-link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $primary-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms $time-distribution-function;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: $accent-color;
+}
+.selected-page {
+  position: relative;
+  color: $accent-color;
+}
+
+.selected-page::after {
+  /*display: block;*/
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+
+  background: $accent-color;
+  border-radius: 2px;
+}
+
+.nav-list .list:not(:last-child) {
+  margin-right: 50px;
+}
+
+/*адрес і мейл*/
+
+.adress-list .lists {
+  margin-right: 50px;
+}
+
+.adress-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.adress-list .lists:not(:last-child) {
+  margin-right: 50px;
+}
+.adress-list .lists {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  color: &tittle-text-color;
+
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  color: $tittle-text-color;
+
+  transition: color 250ms $time-distribution-function;
+}
+
+.link-adress {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.icon-contact {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.adress-list :hover,
+.adress-list :focus {
+  color: $accent-color;
+  --color4: currentColor;
+}

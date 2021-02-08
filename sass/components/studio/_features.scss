@@ -1,0 +1,43 @@
+/*ЧТО МЫ УМЕЕМ-*/
+
+.section {
+  justify-content: space-between;
+}
+
+.features {
+  display: flex;
+}
+
+.features .item {
+  width: calc((100%-90px) / 4);
+  margin-right: 30px;
+
+  /*outline: 2px solid red;*/
+}
+.features .item:last-child {
+  margin-right: 0px;
+}
+.thumb-features {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+
+  background-color: $background-color-third;
+}
+
+.features-info {
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  font-style: normal;
+  font-weight: normal;
+
+  color: $tittle-text-color;
+}
